@@ -110,3 +110,15 @@ width: 50%;
 .svg_back {
   transform: scaleX(-1);
 }
+
+@media only screen and (max-width: 600px) {
+  .Container-header {
+   flex-direction: column;
+  }
+  .Container-header div {
+    width: 90%;
+  }
+  .Container-header div img{
+    width: 100%;
+  }
+}

@@ -5,7 +5,7 @@ function Products({scroll}) {
   return (
     <>
     <Container>
-        <Row style={{paddingTop:"40px",gap:"10px",justifyContent:"center",alignItems:"center"}}>
+        <Row style={{padding:"40px 0",gap:"10px",justifyContent:"center",alignItems:"center"}}>
         <Card scroll={scroll}/>
         </Row>
    

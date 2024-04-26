@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+:root{
+  --black: rgb(199,198,198)
+}
+
+* {
+  font-family: "Rakkas", serif;
+  /* font-family: Poppins, Arial, Helvetica, sans-serif; */
+  font-weight: 700;
+  font-size: 18px;
+}
+.text-secondary,.navbar,.nav-link,.navbar-brand,.navbar .navbar-nav .nav-link,.navbar .navbar-brand{
+  color:rgb(136, 136, 136);
+
+}
+.text-secondary:hover,
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover,
+.navbar .navbar-nav .nav-link:hover {
+  color: rgb(255, 255, 255); 
+  
+}
+
+.Container-header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+}
+
+.Left-side{
+width: 50%;
+}
+
+.Right-side{
+  width: 50%;
+
+}
+.image-header{
+  width: 70%;
+  height: 100%;
+  border-radius: 30rem 30rem 0 0 ;
+  border: 7px solid rgb(48,46,45);
+}
+.up{
+  background-color: black;
+}
+.content-header{
+  color: #fff;
+
+  font-family: "Rakkas", serif;
+  font-size: 30px;
+  font-weight: 400px;
+  font-style: normal;
+}
+.coin {
+  font-size: 200px;
+  width: 0.1em;
+  height: 1em;
+  background: linear-gradient(#faa504, #141001);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: rotate_4001510 7s infinite linear;
+  transform-style: preserve-3d;
+}
+
+.coin .side, .coin:before, .coin:after {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  border-radius: 50%;
+  right: -0.4em;
+  text-align: center;
+  line-height: 1;
+  transform: rotateY(-90deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.coin .tails, .coin:after {
+  left: -0.4em;
+  transform: rotateY(90deg);
+}
+
+.coin:before, .coin:after {
+  background: linear-gradient(#faa504, #141001);
+  backface-visibility: hidden;
+  transform: rotateY(90deg);
+}
+
+.coin:after {
+  transform: rotateY(-90deg);
+}
+
+@keyframes rotate_4001510 {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.svg_back {
+  transform: scaleX(-1);
+}

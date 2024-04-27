@@ -6,7 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 
-function Navbars({scroll}) {
+function Navbars({scroll,scroll2}) {
   const [id, setId] = useState("");
   const themes = {
     color: "#fff",
@@ -36,7 +36,7 @@ function Navbars({scroll}) {
               onClick={(e) => {
                 scroll.current?.scrollIntoView({
                   behavior: 'smooth',
-                  // block: 'nearest',
+                  block: 'nearest',
                   inline: 'center'
                 })
                 setId(e.target.id);
@@ -46,14 +46,20 @@ function Navbars({scroll}) {
               فلل
             </Nav.Link>
             <Nav.Link
-              id="b"
+              id="b" 
               style={id === "b"?themes:{}}
               onClick={(e) => {
                 console.log(e.target);
                 setId(e.target.id);
+                scroll2.current?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'nearest',
+                  inline: 'center'
+                })
               }}
+              
               eventKey={3}
-              href="#memes"
+             
             >
               منازل
             </Nav.Link>

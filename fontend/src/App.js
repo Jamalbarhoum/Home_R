@@ -5,18 +5,19 @@ import Header from './Header/Header';
 import Products from './Products/Products';
 import { useRef } from 'react';
 import Mems from './mems/Mems';
-import Reload from './reload/Reload';
+
 function App() {
   const scroll = useRef()
+  const scroll2 = useRef()
 
   console.log("jamal");
   return (
     <div className="App">
     
-      <Mems/>
-        <Navbars scroll={scroll}/>
+          <Mems/>
+        <Navbars scroll2={scroll2} scroll={scroll}/>
         <Header/>
-        <Products scroll={scroll}/>
+        <Products scroll2={scroll2}  scroll={scroll}/>
     </div>
   );
 }

@@ -15,6 +15,9 @@ app.use(cors());
 
 
 const ValRouter = require("./routes/vala");
+const HousesRouter = require("./routes/house")
+
+app.use("/Houses",HousesRouter)
 
 
 app.use("/val",ValRouter)

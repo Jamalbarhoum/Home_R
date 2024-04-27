@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-
+import { useNavigate, useParams,useLocation } from "react-router-dom";
 import Reload from "../reload/Reload";
 function Cord({ scroll, val,toggle,title }) {
 
-
+  const redirect = useNavigate()
 
 
   return (
@@ -33,7 +33,12 @@ function Cord({ scroll, val,toggle,title }) {
                   <Card.Title>{elm.address.slice(3)}</Card.Title>
                   <Card.Text>{elm.description.slice(0,30)}</Card.Text>
                   <Card.Text>$ {elm.price}</Card.Text>
-                  <Button variant="primary">بيت</Button>
+                  <Button onClick={()=>{
+                  redirect({
+                    pathname:"Info",
+                    search: `?idx=${elm}`
+                  })
+                  }} variant="primary">بيت</Button>
                 </Card.Body>
               </Card>
             </>

@@ -24,6 +24,7 @@
 }
 
 .Container-header{
+ 
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -31,11 +32,13 @@
 }
 
 .Left-side{
-width: 50%;
+width: 20%;
 }
 
 .Right-side{
-  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
 
 }
 .image-header{
@@ -46,6 +49,7 @@ width: 50%;
 }
 .up{
   background-color: black;
+ 
 }
 .content-header{
   color: #fff;
@@ -113,7 +117,11 @@ width: 50%;
 
 @media only screen and (max-width: 600px) {
   .Container-header {
+    display: flex;
    flex-direction: column;
+   align-items: "center";
+   justify-content: "center";
+  
   }
   .Container-header div {
     width: 90%;

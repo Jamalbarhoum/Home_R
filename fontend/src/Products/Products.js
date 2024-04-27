@@ -21,7 +21,7 @@ function Products({scroll,scroll2}) {
           },0)
         }, 1000);
 
-        console.log(result.data.result);
+     
       })
       .catch((error) => {
         console.log(error);

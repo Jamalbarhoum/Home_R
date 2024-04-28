@@ -5,8 +5,11 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router";
+
 
 function Navbars({scroll,scroll2}) {
+  const redirect = useNavigate()
   const [id, setId] = useState("");
   const themes = {
     color: "#fff",
@@ -22,8 +25,13 @@ function Navbars({scroll,scroll2}) {
             <Nav.Link id="e"
             style={id === "e"?themes:{}}
               onClick={(e) => {
-
+ 
                 setId(e.target.id);
+                redirect({
+                  pathname:"/",
+                  search:"/home"
+
+                })
               }}
               href="#deets"
             >

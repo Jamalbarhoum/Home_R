@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap'
 import Card from "../Cord/Cord"
 
 import axios from 'axios';
+import ScrollTop from '../ScrollTop/ScrollTop';
 function Products({scroll,scroll2}) {
   const [val, setVal] = useState([]);
   const [toggle, setToggle] = useState(true);
@@ -14,8 +15,11 @@ function Products({scroll,scroll2}) {
       .get("http://localhost:5000/val/")
       .then((result) => {
         setTimeout(() => {
-          setVal(result.data.result);
-          console.log(result.data.result);
+          const vil =  result.data.result.filter((elm,index)=>{
+            return elm.property_type === 'Villa'
+      })
+          setVal(vil);
+      
           setTimeout((result)=>{
             setToggle(false)
           },0)
@@ -26,14 +30,18 @@ function Products({scroll,scroll2}) {
       .catch((error) => {
         console.log(error);
       });
+      return ()=>setVal([])
   }, []);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/houses/`)
+      .get(`http://localhost:5000/val/`)
       .then((result) => {
         console.log(result.data.result);
-        setData(result.data.result);
+        const musers =  result.data.result.filter((elm,index)=>{
+              return elm.property_type === 'House'
+        })
+        setData(musers);
         setTimeout(()=>{
             setToggle1(false)
         },3000)
@@ -42,12 +50,15 @@ function Products({scroll,scroll2}) {
       .catch((err) => {
         console.log(err);
       });
+      return ()=>setData([])
   }, []);
   return (
     
     <>
+      <ScrollTop/>
     <Container>
-        <Row style={{padding:"40px 0",gap:"10px",justifyContent:"center",alignItems:"center"}}>
+    
+        <Row style={{padding:"10px 0 150px 0",gap:"10px",justifyContent:"center",alignItems:"center"}}>
         <Card val={val} toggle={toggle} scroll={scroll} title={"فلل"}/>
         <Card val={data} toggle={toggle1} scroll={scroll2} title={"منازل"} />
         </Row>

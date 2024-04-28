@@ -1,0 +1,32 @@
+/* style={{width:"100%",position:"sticky",top:"70%",zIndex:"100",right:"0",display:"flex",justifyContent:"end"}} */
+
+
+.ScrollUp{
+    cursor: pointer;
+    width: 100%;
+    position: sticky;
+    top: 90%;
+    z-index: 0;
+    padding-right: 100px;
+    display: flex;
+    justify-content: end;
+}
+@media only screen and (max-width: 1200px) {
+    .ScrollUp{
+        cursor: pointer;
+        top: 92%;
+        border: 2px solid rgb(48, 45, 43);
+        padding: 10px;
+        background-color: rgb(15, 15, 15);
+        width:100%;
+        align-items: center;
+        
+    }
+    .ScrollUp :first-child{
+        font-size: 10px;
+        color: #fff;
+        font-size: 10px;
+        width: 30px;
+
+    }
+}

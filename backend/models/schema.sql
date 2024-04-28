@@ -49,4 +49,19 @@ VALUES
     ('444 Oak St', 'Seattle', 'Charming cottage in quiet neighborhood', 2, 1, 'http://example.com/image7.jpg', 400000),
     ('555 Pine St', 'Denver', 'Ski-in/ski-out chalet in the Rocky Mountains', 4, 3, 'http://example.com/image8.jpg', 900000),
     ('666 Oak St', 'Boston', 'Historic brownstone in Beacon Hill', 3, 2, 'http://example.com/image9.jpg', 800000),
+
+    ('777 Maple Ave', 'Austin', 'Modern loft with rooftop terrace in downtown', 1, 1, 'http://example.com/image10.jpg', 300000);
+
+    
+INSERT INTO properties (address, city, description, bedrooms, bathrooms, image, price)
+VALUES
+    ('123 Main St', 'New York', 'Cozy apartment in the heart of the city', 3, 2, 'http://example.com/image1.jpg', 350000),
+    ('456 Elm St', 'Los Angeles', 'Spacious family home with backyard', 4, 3, 'http://example.com/image2.jpg', 500000),
+    ('789 Oak St', 'Chicago', 'Modern loft in downtown area', 2, 1, 'http://example.com/image3.jpg', 250000),
+    ('101 Pine St', 'Houston', 'Luxurious mansion with pool', 5, 4, 'http://example.com/image4.jpg', 700000),
+    ('222 Maple Ave', 'San Francisco', 'Beautiful Victorian house near Golden Gate Park', 6, 4, 'http://example.com/image5.jpg', 1200000),
+    ('333 Elm St', 'Miami', 'Beachfront condo with stunning ocean views', 2, 2, 'http://example.com/image6.jpg', 600000),
+    ('444 Oak St', 'Seattle', 'Charming cottage in quiet neighborhood', 2, 1, 'http://example.com/image7.jpg', 400000),
+    ('555 Pine St', 'Denver', 'Ski-in/ski-out chalet in the Rocky Mountains', 4, 3, 'http://example.com/image8.jpg', 900000),
+    ('666 Oak St', 'Boston', 'Historic brownstone in Beacon Hill', 3, 2, 'http://example.com/image9.jpg', 800000),
     ('777 Maple Ave', 'Austin', 'Modern loft with rooftop terrace in downtown', 1, 1, 'http://example.com/image10.jpg', 300000);

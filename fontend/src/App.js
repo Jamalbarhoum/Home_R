@@ -19,7 +19,9 @@ function App() {
           path="/Info/"
           element={
             <>
+            
               <Navbars scroll2={scroll2} scroll={scroll} />
+              <Mems />
               <Info />{" "}
             </>
           }

@@ -13,6 +13,7 @@
 }
 @media only screen and (max-width: 1200px) {
     .ScrollUp{
+        z-index: 100;
         cursor: pointer;
         top: 92%;
         border: 2px solid rgb(48, 45, 43);

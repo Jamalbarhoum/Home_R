@@ -1,6 +1,7 @@
 import React from 'react'
 import { BiArrowToTop } from "react-icons/bi";
 import "./ScrollUp.css"
+import { Container } from 'react-bootstrap';
 function ScrollTop() {
   return (
     <>

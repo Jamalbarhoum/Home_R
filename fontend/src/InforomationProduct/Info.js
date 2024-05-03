@@ -5,6 +5,7 @@ import Reload from "../reload/Reload";
 import axios from "axios";
 import "./infi.css";
 import { MotionAnimate } from "react-motion-animate";
+import Table from "../TableInfo/Table";
 
 function Info({ home }) {
   const [show, setToggleShow] = useState(false);
@@ -37,8 +38,8 @@ function Info({ home }) {
     <>
       {toggle ? (
         <div style={{ height: "140vh" }} className="up scrollbar">
-          <Container>
-            <Row>
+          <Container className="Container">
+            <Row className="Row">
               {" "}
               <Col
                 style={{
@@ -47,10 +48,10 @@ function Info({ home }) {
                   alignItems: "center",
                 }}
               >
-                <Image
+                <Image className="image"
                   style={{
                     width: "100%",
-                    height:"80%",
+                    height: "80%",
                     borderRadius: "90px 600px 100px 30px",
                     border: "7px solid rgb(48,46,45)",
                   }}
@@ -68,7 +69,7 @@ function Info({ home }) {
                 }}
               >
                 <h1>{data.city}</h1>
-                <h1 style={{ color: "red",margin:"20px" }}>${data.price}</h1>
+                <h1 style={{ color: "red", margin: "20px" }}>${data.price}</h1>
               </Col>
             </Row>
             <Button
@@ -95,28 +96,7 @@ function Info({ home }) {
                 {" "}
                 <Row>
                   {" "}
-                  <table class="styled-table">
-                    <thead>
-                      <tr>
-                        <th>city</th>
-                        <th>type</th>
-                        <th>bedrooms</th>
-                        <th>bathrooms</th>
-                        <th>price</th>
-                        <th>description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th> {data.city}</th>
-                        <th> {data.property_type}</th>
-                        <th>{data.bedrooms}</th>
-                        <th> {data.bathrooms}</th>
-                        <th> {data.price}</th>
-                        <th> {data.description}</th>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <Table data={data} />
                 </Row>
               </MotionAnimate>
             )}

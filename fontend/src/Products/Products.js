@@ -58,7 +58,7 @@ function Products({scroll,scroll2}) {
       <ScrollTop/>
     <Container>
     
-        <Row style={{padding:"10px 0 150px 0",gap:"10px",justifyContent:"center",alignItems:"center"}}>
+        <Row style={{padding:"10px 0 50px 0",gap:"10px",justifyContent:"center",alignItems:"center"}}>
         <Card val={val} toggle={toggle} scroll={scroll} title={"فلل"}/>
         <Card val={data} toggle={toggle1} scroll={scroll2} title={"منازل"} />
         </Row>

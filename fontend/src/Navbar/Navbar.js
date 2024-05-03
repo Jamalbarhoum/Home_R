@@ -71,7 +71,8 @@ function Navbars({scroll,scroll2}) {
             >
               منازل
             </Nav.Link>
-            <Button id="c" eventKey={4} href="#memes">
+            <Button id="c" eventKey={4} href="https://jamallbarhoum.netlify.app/">
+            
               تواصل معنا
             </Button>
           </Nav>

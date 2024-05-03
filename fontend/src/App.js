@@ -6,6 +6,7 @@ import { useRef } from "react";
 import Mems from "./mems/Mems";
 import { Routes, Route, Link } from "react-router-dom";
 import Info from "./InforomationProduct/Info";
+import Footer from "./footer/Footer";
 
 function App() {
   const scroll = useRef();
@@ -35,6 +36,7 @@ function App() {
               <Navbars scroll2={scroll2} scroll={scroll} />
               <Header />
               <Products scroll2={scroll2} scroll={scroll} />
+              <Footer/>
             </>
           }
         />

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import "./App.css";
 import Navbars from "./Navbar/Navbar";
 import Header from "./Header/Header";

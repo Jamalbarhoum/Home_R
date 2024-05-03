@@ -29,7 +29,9 @@ app.use("/val",ValRouter)
 
 
 
-
+app.use("*",(req,res)=>{
+  res.status(404).json("NO Content is this path")
+})
 
 
 

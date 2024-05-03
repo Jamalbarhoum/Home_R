@@ -21,7 +21,7 @@ function Info({ home }) {
     });
     const getProduct = () => {
       axios
-        .get(`http://localhost:5000/val/${id.current}`)
+        .get(`https://home-k4ci.onrender.com/val/${id.current}`)
         .then((result) => {
           console.log(result.data.result[0]);
           setData_product(result.data.result[0]);
@@ -48,7 +48,8 @@ function Info({ home }) {
                   alignItems: "center",
                 }}
               >
-                <Image className="image"
+                <Image
+                  className="image"
                   style={{
                     width: "100%",
                     height: "80%",
